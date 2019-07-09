@@ -1,0 +1,29 @@
+import React from 'react';
+
+const Todos = props => {
+	const todolist = props.todos.map(eachtodo => {
+		return (
+			<div>
+				<ul className="list-group block">
+					<li className="list-group-item inline-block">
+						<span>{eachtodo.content}</span>
+						<span className="float-right">
+							<i className="mx-1 fas fa-check-circle" />
+							<i className="mx-1 fas fa-minus-circle" />
+						</span>
+					</li>
+				</ul>
+			</div>
+		);
+	});
+	return todolist;
+};
+export default Todos;
+
+
+
+	handleOnClickDone(eachtodo) {
+		
+		let y = document.querySelector(`div.${eachtodo.id}>span`);
+		y.style.textDecoration = 'line-through';
+	}

@@ -6,13 +6,13 @@ class App extends Component {
 	state = {
 		todos: [{ id: 1, content: '1st todo' }, { id: 2, content: '2nd todo' }]
 	};
-	addTodo =(todo)=>{
+	addTodo = todo => {
 		todo.id = Math.random();
-		let todos = [...this.state.todos, todo]
+		let todos = [...this.state.todos, todo];
 		this.setState({
 			todos
-		})
-	}
+		});
+	};
 	render() {
 		return (
 			<div className="jumbotron jumbotron-fluid">
@@ -26,7 +26,7 @@ class App extends Component {
 					<Todos todos={this.state.todos} />
 				</div>
 				<div className="addTodo container">
-					<AddTodo addTodo={this.addTodo}/>
+					<AddTodo addTodo={this.addTodo} />
 				</div>
 			</div>
 		);

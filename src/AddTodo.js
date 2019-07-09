@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class AddTodo extends Component {
 	state = {
-		content: null
+		content: ''
 	};
 	handleChange = e => {
 		this.setState({
@@ -15,7 +15,7 @@ class AddTodo extends Component {
 		this.setState({
 			content: ''
 		});
-    };
+	};
 
 	render() {
 		return (

@@ -38,7 +38,6 @@ class Todos extends Component {
 	handleOnClickDone(eachtodo) {
 		let y = document.getElementById(eachtodo.id);
 		y.querySelector('.content').style.textDecoration = 'line-through';
-		console.log(y);
 	}
 }
 

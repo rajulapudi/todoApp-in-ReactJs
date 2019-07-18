@@ -1,68 +1,96 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TODO APP - REACT REDUX 
 
-## Available Scripts
+STEP-1 : Create React APP
 
-In the project directory, you can run:
+React - Intro
+1. Components (injected to DOM)
+2. Virtual DOM is rendered to real DOM
+3. React makes a Virtual DOM based on all the Components and renders that virtual DOM to Browser DOM
+4. Also updates will only be rendered instead of whole page
+5. Virtual DOM is made by React using JSX- which is similar to templating languages (like ejs, hbs, or pug)
 
-### `npm start`
+Components :
+1. Functional Components   vs   Class Components
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Component States:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+1. Where Data or UI-state is contained in a state of a Component
+eq: shopping cart will have a initial empty array state
+when a user adds a item to shopping cart the state of the component will get updated to refelct that added item
 
-### `npm test`
+2. UI-state : for example pop-up is either true or flase which can be contained in state of a component and can be updated
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+STATE : is an object which can container properties
 
-### `npm run build`
+Container Components vs UI Components
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+CONTAINER COMPONENTS:
+contains state
+contain lifecycle hooks
+not concerned with UI
+Use Classes to create
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+UI COMPONENTS:
+Does'nt have state
+receive data from props
+only concerned with UI
+use function or classes to create
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+COMPONENT LIFE-CYCLES-HOOKS
 
-### `npm run eject`
+a. Mounting Phase - Components are first created
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    1. constructor
+    2. getDerivedStateFromProps
+    3. render
+    4. componentDidMount - good place to get data from external sources
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+b. Updating Phase
+ 
+    1. getDerivedStateFromProps
+    2. shouldComponentUpdate
+    3. render
+    4. getSnapshotBeforeUpdate
+    5. componentDidUpdate
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+c. Unmounting Phase
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    1. componentWillUnmount
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+REACT DOM EVENTS:
 
-### Code Splitting
+Clipboard Events - onCopy onCut onPaste
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Composition Events - onCompositionEnd onCompositionStart onCompositionUpdate
 
-### Analyzing the Bundle Size
+Keyboard Events - onKeyDown onKeyPress onKeyUp
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Focus Events - onFocus onBlur
 
-### Making a Progressive Web App
+Form Events - onChange onInput onInvalid onSubmit
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Mouse Events - onClick onContextMenu onDoubleClick onDrag onDragEnd onDragEnter onDragExit
+                onDragLeave onDragOver onDragStart onDrop onMouseDown onMouseEnter onMouseLeave
+                onMouseMove onMouseOut onMouseOver onMouseUp
 
-### Advanced Configuration
+Pointer Events
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Selection Events - onSelect
 
-### Deployment
+Touch Events - onTouchCancel onTouchEnd onTouchMove onTouchStart
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+UI Events - onScroll
 
-### `npm run build` fails to minify
+Wheel Events - onWheel
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Media Events
+
+Image Events - onLoad onError
+
+Animation Events - onAnimationStart onAnimationEnd onAnimationIteration
+
+Transition Events - onTransitionEnd
+
+Other Events - onToggle

@@ -30,3 +30,10 @@ props.history.push
 
 HIGHER ORDER COMPONENTS:
 these adds features to the components to make them supercharged
+
+
+USING AXIOS:
+
+use API calls in Class based Components and also along with lifecycleHooks so that the DOM is render once the API call is finished and data is available 
+
+

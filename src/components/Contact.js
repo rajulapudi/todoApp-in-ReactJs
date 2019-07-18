@@ -1,11 +1,9 @@
 import React from 'react';
+import Rainbow from '../hoc/Rainbow';
 
 /* Functional Component */
 
-const Contact = props => {
-	setTimeout(() => {
-		props.history.push('/home');
-	}, 2000);
+const Contact = () => {
 	return (
 		<div className="container">
 			<h4>Contact PAGE</h4>
@@ -19,4 +17,4 @@ const Contact = props => {
 	);
 };
 
-export default Contact;
+export default Rainbow(Contact);

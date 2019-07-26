@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class SampleAxios extends Component {
 	state = {
@@ -7,7 +8,6 @@ class SampleAxios extends Component {
 	};
 	componentDidMount() {
 		axios.get('https://jsonplaceholder.typicode.com/posts').then(res => {
-			console.log(res);
 			this.setState({
 				posts: res.data.slice(0, 10)
 			});
@@ -18,14 +18,16 @@ class SampleAxios extends Component {
 		const postList = posts.length ? (
 			posts.map(post => {
 				return (
-					<div className="card" key="post.id">
+					<div className="card" key={post.id}>
 						<img
 							className="card-img-top"
 							src="holder.js/100x180/"
 							alt=""
 						/>
 						<div className="card-body">
-							<h4 className="card-title">{post.title}</h4>
+							<Link to={'/sample/' + post.id}>
+								<h4 className="card-title">{post.title}</h4>
+							</Link>
 							<p className="card-text">{post.body}</p>
 						</div>
 					</div>

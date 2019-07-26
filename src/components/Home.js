@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import Todos from '../Todos';
 import AddTodo from '../AddTodo';
+import { connect } from 'react-redux';
 
 class Home extends Component {
-	state = {
-		todos: [{ id: 1, content: '1st todo' }, { id: 2, content: '2nd todo' }]
-	};
 	addTodo = todo => {
 		todo.id = Math.random();
 		let todos = [...this.state.todos, todo];
@@ -14,12 +12,13 @@ class Home extends Component {
 		});
 	};
 	render() {
+		console.log(this.props);
 		return (
 			<div className="jumbotron jumbotron-fluid">
-				<div className="container">
+				{/* <div className="container">
 					<h1 className="display-3 text-center">TODO Home</h1>
 					<p className="lead text-center">
-						This is my first react Home
+						This is my first react App
 					</p>
 				</div>
 				<div className="todoList container">
@@ -27,9 +26,15 @@ class Home extends Component {
 				</div>
 				<div className="addTodo container">
 					<AddTodo addTodo={this.addTodo} />
-				</div>
+				</div> */}
 			</div>
 		);
 	}
 }
-export default Home;
+const mapStateToProps = state => {
+	return {
+		todos: state.todos
+	};
+};
+
+export default connect(mapStateToProps)(Home);

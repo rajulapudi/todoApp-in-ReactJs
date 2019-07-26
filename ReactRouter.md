@@ -17,6 +17,8 @@ enclose all the jsx in BrowserRouter - so that we can use Route tag inside that 
 
 <Route path='' component={}>
 
+
+
 We can load certain components based on Routes using the above line
 
 But after this also the pages are loaded but the request is still going to server

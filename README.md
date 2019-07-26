@@ -46,7 +46,7 @@ a. Mounting Phase - Components are first created
     4. componentDidMount - good place to get data from external sources
 
 b. Updating Phase
- 
+
     1. getDerivedStateFromProps
     2. shouldComponentUpdate
     3. render

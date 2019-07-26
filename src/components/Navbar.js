@@ -19,6 +19,9 @@ const Navbar = () => {
 				<NavLink className="nav-item nav-link" to="/sample">
 					Sample
 				</NavLink>
+				<NavLink className="nav-item nav-link" to="/reactlifecycle">
+					React Life Cycle
+				</NavLink>
 			</div>
 		</nav>
 	);
